@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="/path/to/folder/css/academicons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    
+    
+
+    
+    
+    <title>DiffusionNet</title>
+</head>
+<body>
+
+
+
+
+
+<div class="container">
+
+<div class="jumbotron shadow-sm">
+    <h2 class="text-center" >
+       <mark style="background: rgb(255, 218, 207);">DiffusionNet</mark> :Accelerating the solution of Time-Dependent partial differential equations using deep learning
+    </h2>
+</div>
+
+
+    
+<h3 class="text-center" >Abstract</h3>
+<h5  style="font-weight:400;line-height: 20pt;">
+    We present our deep learning framework to solve and accelerate the <mark>Time-Dependent partial differential equation's solution of one and two spatial dimensions</mark>. 
+    We demonstrate DiffusionNet solver by solving the 2D transient heat conduction problem with Dirichlet boundary conditions. The model is trained on solution data calculated using the Alternating direction implicit method. 
+    We show the model's ability to predict the solution from any combination of seven variables: the starting time step of the solution, initial condition, 
+    four boundary conditions, and a combined variable of the time step size, diffusivity constant, and grid step size. To improve speed, 
+    we exploit our model capability to predict the solution of the Time-dependent PDE after multiple time steps at once to improve the speed of solution by <mark>dividing the solution into parallelizable chunks</mark>. 
+    We try to build a flexible architecture capable of solving a wide range of partial differential equations with minimal changes. 
+    We demonstrate our model flexibility by applying our model with the same network architecture used to solve the transient heat conduction to solve the Inviscid Burgers equation and Steady-state heat conduction, 
+    then compare our model performance against related studies. We show that our model <mark> reduces the error of the solution for the investigated problems</mark>.
+</h5>
+<br>
+<h4 class="text-center" style="font-size:30pt">Results I - Inviscid Burgers equation</h4>
+<img class=" shadow-sm " src="https://i.imgur.com/BqDVSPy.jpg" style="max-width:100%;">
+<br><br>
+<h4 class="text-center" style="font-size:30pt">Results II - Transient heat equation</h4>
+<img class=" shadow-sm " src="https://i.imgur.com/YAAV6kQ.jpg" style="max-width:100%;">
+
+
+
+
+
+</div>
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+        <script>
+            const scrollMid = id => {
+                document.getElementById(id).scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth'
+                })
+
+            }
+            const mobileScroll = id => {
+                document.getElementById("navBtn").click()
+                document.getElementById(id).scrollIntoView({
+                    block: 'center',
+                    behavior: 'smooth'
+                })
+            }
+            const toTop = () => {
+                document.getElementById("navBtn").click()
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            }
+        </script>
+
+
+
+</body>
+
+</html>
