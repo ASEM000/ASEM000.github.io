@@ -56,7 +56,7 @@ a#connect-orcid-link:hover {
 
 
 .thumb:hover{
-    filter: brightness(80%);
+    filter: brightness(110%);
     transform: scale(1.01)
 }
 
