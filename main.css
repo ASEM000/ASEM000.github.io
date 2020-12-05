@@ -113,12 +113,12 @@ a#connect-orcid-link:hover {
     /* font-family: 'Old Standard TT', serif; */
     font-size: 18pt;
     font-weight: 500;
-    /* font-style: italic; */
     border-bottom: 5px solid rgb(223, 223, 223);
 }
 
 .section-title:hover{
-    border-bottom: 5px solid rgb(109, 109, 109);
+    border-bottom: 7px solid rgb(109, 109, 109);
+    
 }
 
 .section-sub-title {
